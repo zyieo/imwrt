@@ -69,8 +69,8 @@ jobs:
       - name: Generate configuration file
         run: |
           make defconfig
-          rm .config
-          cp run.config .config
+          #rm .config
+          #cp run.config .config
 
       - name: Make download
         run: |
