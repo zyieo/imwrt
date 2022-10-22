@@ -5,7 +5,14 @@
 ImmortalWrt is a fork of [OpenWrt](https://openwrt.org), with more packages ported, more devices supported, better performance, and special optimizations for mainland China users.<br/>
 Compared the official one, we allow to use hacks or non-upstreamable patches / modifications to achieve our purpose. Source from anywhere.
 
-Default login address: http://192.168.1.1 or http://immortalwrt.lan, username: __root__, password: __password__.
+Default login address: http://192.168.1.1 or http://immortalwrt.lan, username: __root__, password: _none_.
+
+## Download
+Built firmware images are available for many architectures and come with a package selection to be used as WiFi home router. To quickly find a factory image usable to migrate from a vendor stock firmware to ImmortalWrt, try the *Firmware Selector*.
+
+- [ImmortalWrt Firmware Selector](https://firmware-selector.immortalwrt.org/)
+
+If your device is supported, please follow the **Info** link to see install instructions or consult the support resources listed below.
 
 ## Development
 To build your own firmware you need a GNU/Linux, BSD or MacOSX system (case sensitive filesystem required). Cygwin is unsupported because of the lack of a case sensitive file system.<br/>
@@ -25,7 +32,7 @@ To build your own firmware you need a GNU/Linux, BSD or MacOSX system (case sens
         sudo apt full-upgrade -y
         sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
           bzip2 ccache cmake cpio curl device-tree-compiler ecj fastjar flex gawk gettext gcc-multilib g++-multilib \
-          git gperf haveged help2man intltool lib32gcc1 libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \
+          git gperf haveged help2man intltool lib32gcc-s1 libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \
           libmpc-dev libmpfr-dev libncurses5-dev libncursesw5 libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \
           mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pip python3-ply \
           python-docutils qemu-utils re2c rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip \
@@ -34,7 +41,7 @@ To build your own firmware you need a GNU/Linux, BSD or MacOSX system (case sens
       </details>
     - Method 2:
       ```bash
-      curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh | sudo bash
+      sudo bash -c 'bash <(curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh)'
       ```
 
   - You can also download and use prebuilt container directly:<br/>
