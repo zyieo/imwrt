@@ -70,7 +70,7 @@ jobs:
         run: |
           make defconfig
           #rm .config
-          #cp run.config .config
+          cp run.config .config
 
       - name: Make download
         run: |
